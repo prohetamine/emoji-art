@@ -1,17 +1,80 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { Provider } from 'react-redux'
+import { createStore, dispatch } from 'redux'
+import start from './assets/start.png'
+import styled from 'styled-components'
+import './index.css'
+import App from './app'
+
+const reducer = (state = {}, action) => {
+  if (action.type === 'hidden-layer') {
+    return {
+      ...state,
+      hiddenLayer: !state.hiddenLayer,
+    }
+  }
+
+  if (action.type === 'upload-file') {
+    return {
+      ...state,
+      uploadFile: action.payload,
+    }
+  }
+
+  if (action.type === 'progress') {
+    return {
+      ...state,
+      progress: action.payload,
+    }
+  }
+
+  if (action.type === 'save-file') {
+    return {
+      ...state,
+      saveFile: action.payload,
+    }
+  }
+
+  if (action.type === 'alert') {
+    return {
+      ...state,
+      alert: {
+        isShow: true,
+        message: action.payload
+      }
+    }
+  }
+
+  if (action.type === 'hidden-alert') {
+    return {
+      ...state,
+      alert: {
+        ...state.alert,
+        isShow: false
+      }
+    }
+  }
+
+  return state
+}
+
+const store = createStore(reducer, {
+  hiddenLayer: false,
+  uploadFile: null,
+  saveFile: null,
+  progress: 0,
+  alert: {
+    isShow: false,
+    message: 'Done!'
+  }
+})
+
+store.dispatch({ type: 'upload-file', payload: start })
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+)
