@@ -1,7 +1,7 @@
 {
   "name": "emoji-art",
   "version": "0.1.0",
-  "homepage": "https://github.com/prohetamine/emoji-art",
+  "homepage": "https://prohetamine.github.io/emoji-art/",
   "private": true,
   "dependencies": {
     "@charlietango/use-window-size": "^1.6.0",
