@@ -150,7 +150,11 @@ export default () => {
               ctx.drawImage(images[key], x - size / 2, y - size / 2, size, size)
             } catch (e) {}
 
-            if (_progerss === 100) {
+            if (progress === maxProgress) {
+              timerIds.forEach(
+                timeId => clearTimeout(timeId)
+              )
+
               dispatch({
                 type: 'save-file',
                 payload: ref.current.toDataURL('image/png')
