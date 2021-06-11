@@ -17,7 +17,7 @@ const Line = styled(motion.div)`
 const Progress = () => {
   const value = useSelector(store => store.progress)
   const { width } = useWindowSize()
-      , progress = (width / 100) * value
+      , progress = (width / 100) * parseInt(value)
   return (
     <Line animate={{ width: progress }} />
   )

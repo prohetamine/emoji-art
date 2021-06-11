@@ -150,7 +150,7 @@ export default () => {
               ctx.drawImage(images[key], x - size / 2, y - size / 2, size, size)
             } catch (e) {}
 
-            if (progress === maxProgress) {
+            if (_progerss === 100) {
               timerIds.forEach(
                 timeId => clearTimeout(timeId)
               )
