@@ -104,6 +104,11 @@ export default () => {
         , images = state.images
 
     if (ctx && file && width && height && images) {
+      dispatch({
+        type: 'save-file',
+        payload: null
+      })
+
       ctx.clearRect(0, 0, width, height)
 
       ctx.drawImage(file, 0, 0, width, height)
