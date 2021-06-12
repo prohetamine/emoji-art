@@ -4,7 +4,6 @@ import { motion } from 'framer-motion'
 import { useSelector, useDispatch } from 'react-redux'
 import shareBlack from './assets/share-black.svg'
 import share from './assets/share.svg'
-import post from './assets/post.png'
 
 const Body = styled.div`
   position: fixed;
@@ -169,7 +168,7 @@ const ShareAlert = () => {
                   icon={[share, shareBlack]}
                   onClick={e => {
                     //e.stopPropogation()
-                    Share.pinterest('https://prohetamine.github.io/emoji-art', 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window', post)
+                    Share.pinterest('https://prohetamine.github.io/emoji-art', 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window', 'https://raw.githubusercontent.com/prohetamine/emoji-art/main/public/post.png')
                   }}
                 />
 
@@ -178,7 +177,7 @@ const ShareAlert = () => {
                   icon={[share, shareBlack]}
                   onClick={e => {
                     e.stopPropogation()
-                    Share.facebook('https://prohetamine.github.io/emoji-art', 'Emoji art', post, 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window')
+                    Share.facebook('https://prohetamine.github.io/emoji-art', 'Emoji art', 'https://raw.githubusercontent.com/prohetamine/emoji-art/main/public/post.png', 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window')
                   }}
                 />
 
