@@ -23,7 +23,7 @@ const Message = styled.div`
   border-radius: 9px;
   font-family: Roboto;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 20px;
   color: #000000;
   display: flex;
