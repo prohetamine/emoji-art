@@ -128,7 +128,7 @@ const Share = {
 		url += '&imageurl='    + encodeURIComponent(pimg);
 		Share.popup(url)
 	},
-	pinterest: function(purl, pimg, text) {
+	pinterest: function(purl, text, pimg) {
 		let url  = 'https://www.pinterest.ru/pin-builder?'
 		url += 'url='          + encodeURIComponent(purl)
 		url += '&description=' + encodeURIComponent(text)
