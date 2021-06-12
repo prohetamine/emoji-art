@@ -20,7 +20,6 @@ const Body = styled.div`
 `
 
 const Message = styled.div`
-  width: 330px;
   padding: 25px 10px 25px 10px;
   background: #F3DC1E;
   border-radius: 9px;
@@ -156,7 +155,6 @@ const ShareAlert = () => {
                   label='pinterest.com'
                   icon={[share, shareBlack]}
                   onClick={e => {
-                    //e.stopPropogation()
                     Share.pinterest('https://prohetamine.github.io/emoji-art', 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window', 'https://raw.githubusercontent.com/prohetamine/emoji-art/main/public/post.png')
                   }}
                 />
@@ -164,7 +162,6 @@ const ShareAlert = () => {
                   label='facebook.com'
                   icon={[share, shareBlack]}
                   onClick={e => {
-                    //e.stopPropogation()
                     Share.facebook('https://prohetamine.github.io/emoji-art', 'Emoji art', 'https://raw.githubusercontent.com/prohetamine/emoji-art/main/public/post.png', 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window')
                   }}
                 />
@@ -172,7 +169,6 @@ const ShareAlert = () => {
                   label='twitter.com'
                   icon={[share, shareBlack]}
                   onClick={e => {
-                    //e.stopPropogation()
                     Share.twitter('https://prohetamine.github.io/emoji-art', 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window')
                   }}
                 />
@@ -180,7 +176,6 @@ const ShareAlert = () => {
                   label='vk.com'
                   icon={[share, shareBlack]}
                   onClick={e => {
-                    //e.stopPropogation()
                     Share.vkontakte('https://prohetamine.github.io/emoji-art', 'Emoji art', 'https://raw.githubusercontent.com/prohetamine/emoji-art/main/public/post.png', 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window')
                   }}
                 />
@@ -188,7 +183,6 @@ const ShareAlert = () => {
                   label='ok.ru'
                   icon={[share, shareBlack]}
                   onClick={e => {
-                    //e.stopPropogation()
                     Share.odnoklassniki('https://prohetamine.github.io/emoji-art', 'Emoji art', 'https://raw.githubusercontent.com/prohetamine/emoji-art/main/public/post.png', 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window')
                   }}
                 />
@@ -196,7 +190,6 @@ const ShareAlert = () => {
                   label='mail.ru'
                   icon={[share, shareBlack]}
                   onClick={e => {
-                    //e.stopPropogation()
                     Share.mailru('https://prohetamine.github.io/emoji-art', 'Emoji art', 'https://raw.githubusercontent.com/prohetamine/emoji-art/main/public/post.png', 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window')
                   }}
                 />
