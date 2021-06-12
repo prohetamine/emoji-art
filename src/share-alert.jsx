@@ -99,10 +99,12 @@ const Share = {
 		url += '&noparse=true';
 		Share.popup(url);
 	},
-	odnoklassniki: function(purl, text) {
-		let url  = 'http://www.odnoklassniki.ru/dk?st.cmd=addShare&st.s=1';
-		url += '&st.comments=' + encodeURIComponent(text);
-		url += '&st._surl='    + encodeURIComponent(purl);
+	odnoklassniki: function(purl, ptitle, pimg, text) {
+	  let url  = 'https://connect.ok.ru/offer?'
+    url += 'url='           + encodeURIComponent(purl)
+    url += '&title='        + encodeURIComponent(ptitle)
+    url += '&description='  + encodeURIComponent(text)
+    url += '&imageUrl='     + encodeURIComponent(pimg)
 		Share.popup(url);
 	},
 	facebook: function(purl, ptitle, pimg, text) {
@@ -187,15 +189,15 @@ const ShareAlert = () => {
                   icon={[share, shareBlack]}
                   onClick={e => {
                     //e.stopPropogation()
-                    Share.odnoklassniki('https://prohetamine.github.io/emoji-art', 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window')
+                    Share.odnoklassniki('https://prohetamine.github.io/emoji-art', 'Emoji art', 'https://raw.githubusercontent.com/prohetamine/emoji-art/main/public/post.png', 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window')
                   }}
                 />
                 <Button
-                  label='vk.com'
+                  label='mail.ru'
                   icon={[share, shareBlack]}
                   onClick={e => {
                     //e.stopPropogation()
-                    Share.mailru('https://prohetamine.github.io/emoji-art', 'Emoji art', 'IMG_PATH', 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window')
+                    Share.mailru('https://prohetamine.github.io/emoji-art', 'Emoji art', 'https://raw.githubusercontent.com/prohetamine/emoji-art/main/public/post.png', 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window')
                   }}
                 />
               </Message>
