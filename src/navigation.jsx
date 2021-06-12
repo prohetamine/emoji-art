@@ -271,7 +271,7 @@ const Navigation = () => {
         }}
       />
       <ButtonCheckBox
-        label='Hidden original'
+        label='Hide original'
         value={hiddenLayer}
         onClick={() => dispatch({ type: 'hidden-layer' })}
       />
