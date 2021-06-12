@@ -176,7 +176,7 @@ const ShareAlert = () => {
                   label='facebook.com'
                   icon={[share, shareBlack]}
                   onClick={e => {
-                    e.stopPropogation()
+                    //e.stopPropogation()
                     Share.facebook('https://prohetamine.github.io/emoji-art', 'Emoji art', 'https://raw.githubusercontent.com/prohetamine/emoji-art/main/public/post.png', 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window')
                   }}
                 />
@@ -185,7 +185,7 @@ const ShareAlert = () => {
                   label='twitter.com'
                   icon={[share, shareBlack]}
                   onClick={e => {
-                    e.stopPropogation()
+                    //e.stopPropogation()
                     Share.twitter('https://prohetamine.github.io/emoji-art', 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window')
                   }}
                 />
