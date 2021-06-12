@@ -15,6 +15,7 @@ const Body = styled.div`
   align-items: center;
   user-select: none;
   -webkit-user-select: none;
+  cursor: pointer;
 `
 
 const Message = styled.div`
