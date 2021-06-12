@@ -18,19 +18,19 @@ const Body = styled.div`
 `
 
 const Message = styled.div`
-  width: 330px;
-  height: 143px;
+  padding: 25px 10px 25px 10px;
   background: #F3DC1E;
   border-radius: 9px;
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
-  font-size: 64px;
+  font-size: 20px;
   line-height: 75px;
   color: #000000;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 `
 
 const Alert = () => {
