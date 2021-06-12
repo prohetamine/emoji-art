@@ -15,7 +15,7 @@ const Body = styled.a`
 const Logo = styled.img`
   width: 109.12px;
   height: 48.7px;
-  margin-left: 13px;
+  margin-left: 18px;
 `
 
 const Repository = styled.div`
@@ -26,7 +26,7 @@ const Repository = styled.div`
   font-size: 29px;
   line-height: 34px;
   color: #000000;
-  margin-right: 13px;
+  margin-right: 18px;
 `
 
 const Bold = styled.div`
