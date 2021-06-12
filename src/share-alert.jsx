@@ -129,13 +129,13 @@ const Share = {
 		Share.popup(url)
 	},
 	pinterest: function(purl, pimg, text) {
-		let url  = 'http://pinterest.com/pin/create/link?'
+		let url  = 'https://www.pinterest.ru/pin-builder?'
 		url += 'url='          + encodeURIComponent(purl)
 		url += '&description=' + encodeURIComponent(text)
 		url += '&media='    + encodeURIComponent(pimg)
+		url += '&method=link'
 		Share.popup(url)
 	},
-
 	popup: function(url) {
 		window.open(url, '', 'toolbar=0,status=0,width=626,height=436')
 	}
