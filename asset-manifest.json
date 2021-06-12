@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/emoji-art/static/css/main.8ada098c.chunk.css",
-    "main.js": "/emoji-art/static/js/main.89fbfbcc.chunk.js",
-    "main.js.map": "/emoji-art/static/js/main.89fbfbcc.chunk.js.map",
+    "main.css": "/emoji-art/static/css/main.b593a0ea.chunk.css",
+    "main.js": "/emoji-art/static/js/main.6ed4bde1.chunk.js",
+    "main.js.map": "/emoji-art/static/js/main.6ed4bde1.chunk.js.map",
     "runtime-main.js": "/emoji-art/static/js/runtime-main.5e55f1f7.js",
     "runtime-main.js.map": "/emoji-art/static/js/runtime-main.5e55f1f7.js.map",
-    "static/js/2.b12290ac.chunk.js": "/emoji-art/static/js/2.b12290ac.chunk.js",
-    "static/js/2.b12290ac.chunk.js.map": "/emoji-art/static/js/2.b12290ac.chunk.js.map",
+    "static/js/2.f9049e6a.chunk.js": "/emoji-art/static/js/2.f9049e6a.chunk.js",
+    "static/js/2.f9049e6a.chunk.js.map": "/emoji-art/static/js/2.f9049e6a.chunk.js.map",
     "index.html": "/emoji-art/index.html",
-    "static/css/main.8ada098c.chunk.css.map": "/emoji-art/static/css/main.8ada098c.chunk.css.map",
-    "static/js/2.b12290ac.chunk.js.LICENSE.txt": "/emoji-art/static/js/2.b12290ac.chunk.js.LICENSE.txt",
+    "static/css/main.b593a0ea.chunk.css.map": "/emoji-art/static/css/main.b593a0ea.chunk.css.map",
+    "static/js/2.f9049e6a.chunk.js.LICENSE.txt": "/emoji-art/static/js/2.f9049e6a.chunk.js.LICENSE.txt",
     "static/media/arrow-bottom-black.498ebdf1.svg": "/emoji-art/static/media/arrow-bottom-black.498ebdf1.svg",
     "static/media/arrow-bottom.7729bbdf.svg": "/emoji-art/static/media/arrow-bottom.7729bbdf.svg",
     "static/media/arrow-top-black.7c28818e.svg": "/emoji-art/static/media/arrow-top-black.7c28818e.svg",
@@ -109,6 +109,7 @@
     "static/media/partying-face_1f973.png": "/emoji-art/static/media/partying-face_1f973.32c3cf15.png",
     "static/media/peanuts_1f95c.png": "/emoji-art/static/media/peanuts_1f95c.44364d3a.png",
     "static/media/person-mountain-biking_dark-skin-tone_1f6b5-1f3ff_1f3ff.png": "/emoji-art/static/media/person-mountain-biking_dark-skin-tone_1f6b5-1f3ff_1f3ff.2eb706e9.png",
+    "static/media/post.7e2b33e6.png": "/emoji-art/static/media/post.7e2b33e6.png",
     "static/media/share-black.58c214f3.svg": "/emoji-art/static/media/share-black.58c214f3.svg",
     "static/media/share.dc7f35ef.svg": "/emoji-art/static/media/share.dc7f35ef.svg",
     "static/media/start.04a30f1c.png": "/emoji-art/static/media/start.04a30f1c.png",
@@ -133,8 +134,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.5e55f1f7.js",
-    "static/js/2.b12290ac.chunk.js",
-    "static/css/main.8ada098c.chunk.css",
-    "static/js/main.89fbfbcc.chunk.js"
+    "static/js/2.f9049e6a.chunk.js",
+    "static/css/main.b593a0ea.chunk.css",
+    "static/js/main.6ed4bde1.chunk.js"
   ]
 }
