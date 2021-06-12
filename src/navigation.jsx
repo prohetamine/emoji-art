@@ -280,7 +280,7 @@ const Navigation = () => {
         icon={[telegram, telegramBlack]}
         onClick={() => window.open('https://t.me/prohetamine_emojiart')}
       />
-      <By>By Prohetamine 2021</By>
+    <By>By <a href='https://github.com/prohetamine'>Prohetamine</a> 2021</By>
     </Body>
   )
 }
