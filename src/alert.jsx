@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { useSelector, useDispatch } from 'react-redux'
 
 const Body = styled.div`
-  position: absolute;
+  position: fixed;
   z-index: 999;
   left: 0px;
   top: 0px;

@@ -56,6 +56,20 @@ const reducer = (state = {}, action) => {
     }
   }
 
+  if (action.type === 'share') {
+    return {
+      ...state,
+      share: true
+    }
+  }
+
+  if (action.type === 'hidden-share') {
+    return {
+      ...state,
+      share: false
+    }
+  }
+
   return state
 }
 
@@ -67,7 +81,8 @@ const store = createStore(reducer, {
   alert: {
     isShow: false,
     message: 'Done!'
-  }
+  },
+  share: false
 })
 
 store.dispatch({ type: 'upload-file', payload: start })

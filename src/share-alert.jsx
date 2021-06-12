@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 import { useSelector, useDispatch } from 'react-redux'
+import shareBlack from './assets/share-black.svg'
+import share from './assets/share.svg'
+import post from './assets/post.png'
 
 const Body = styled.div`
-  position: absolute;
+  position: fixed;
   z-index: 999;
   left: 0px;
   top: 0px;
@@ -13,23 +17,78 @@ const Body = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 `
 
 const Message = styled.div`
   width: 330px;
-  height: 143px;
+  padding: 25px 10px 25px 10px;
   background: #F3DC1E;
   border-radius: 9px;
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
-  font-size: 64px;
+  font-size: 20px;
   line-height: 75px;
   color: #000000;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 `
+
+const Button = (() => {
+  const Body = styled(motion.button)`
+    padding: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 18px;
+    width: 245px;
+    height: 45px;
+    background: #000000;
+    border: 3px solid #000000;
+    box-sizing: border-box;
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    -webkit-user-select: none;
+    cursor: pointer;
+  `
+
+  const Text = styled.div`
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 35px;
+    color: #F3DC1E;
+  `
+
+  const Img = styled.img`
+    margin-left: 10px;
+    height: 15px;
+  `
+
+  return ({ label, icon, onClick, style }) => {
+    const [active, setActive] = useState(false)
+    return (
+      <Body
+        style={style}
+        animate={{ background: active ? '#000000' : '#F3DC1E' }}
+        onClick={e => onClick(e)}
+        onMouseEnter={() => setActive(true)}
+        onMouseLeave={() => setActive(false)}
+        onTouchStart={() => setActive(true)}
+        onTouchEnd={() => setActive(false)}
+      >
+        <Text style={{ color: active ? '#F3DC1E' : '#000000' }}>{label}</Text>
+        <Img src={active ? icon[0] : icon[1] } />
+      </Body>
+    )
+  }
+})()
 
 const Share = {
 	vkontakte: function(purl, ptitle, pimg, text) {
@@ -70,6 +129,13 @@ const Share = {
 		url += '&imageurl='    + encodeURIComponent(pimg);
 		Share.popup(url)
 	},
+	pinterest: function(purl, pimg, text) {
+		let url  = 'http://pinterest.com/pin/create/link?'
+		url += 'url='          + encodeURIComponent(purl)
+		url += '&description=' + encodeURIComponent(text)
+		url += '&media='    + encodeURIComponent(pimg)
+		Share.popup(url)
+	},
 
 	popup: function(url) {
 		window.open(url, '', 'toolbar=0,status=0,width=626,height=436')
@@ -77,17 +143,72 @@ const Share = {
 }
 
 const ShareAlert = () => {
-  return null /*(
-    <Body>
-      <Message>
-        <div onClick={() => Share.vkontakte('https://prohetamine.github.io/emoji-art', 'Emoji art', 'IMG_PATH', 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window')}>vk</div>
-        <div onClick={() => Share.odnoklassniki('https://prohetamine.github.io/emoji-art', 'Emoji art', 'IMG_PATH', 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window')}>ok</div>
-        <div onClick={() => Share.twitter('https://prohetamine.github.io/emoji-art', 'Emoji art', 'IMG_PATH', 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window')}>twitter</div>
-        <div onClick={() => Share.facebook('https://prohetamine.github.io/emoji-art', 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window')}>facebook</div>
-        <div onClick={() => Share.mailru('https://prohetamine.github.io/emoji-art', 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window')}>mailru</div>
-      </Message>
-    </Body>
-  )*/
+  const dispatch = useDispatch()
+  const _share = useSelector(store => store.share)
+
+  return _share
+          ? (
+            <Body onClick={() => dispatch({ type: 'hidden-share' })}>
+              <Message>
+                {/*<Link onClick={e => {e.stopPropagation(); Share.vkontakte('https://prohetamine.github.io/emoji-art', 'Emoji art', 'IMG_PATH', 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window')}}>VK</Link>
+                <Link onClick={e => {e.stopPropagation(); Share.odnoklassniki('https://prohetamine.github.io/emoji-art', 'Emoji art', 'IMG_PATH', 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window')}}>ODNOKLASSNIKI</Link>
+                <Link onClick={e => {e.stopPropagation(); Share.twitter('https://prohetamine.github.io/emoji-art', 'Emoji art', 'IMG_PATH', 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window')}}>VK</Link>
+                <Link onClick={e => {e.stopPropagation(); Share.facebook('https://prohetamine.github.io/emoji-art', 'Emoji art', 'IMG_PATH', 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window')}}>VK</Link>
+                <Link onClick={e => {e.stopPropagation(); Share.mailru('https://prohetamine.github.io/emoji-art', 'Emoji art', 'IMG_PATH', 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window')}}>VK</Link>
+
+
+                  <div onClick={e => e.stopPropogation() || Share.odnoklassniki('https://prohetamine.github.io/emoji-art', 'Emoji art', 'IMG_PATH', 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window')}>ok</div>
+                  <div onClick={e => e.stopPropogation() || Share.twitter('https://prohetamine.github.io/emoji-art', 'Emoji art', 'IMG_PATH', 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window')}>twitter</div>
+                  <div onClick={e => e.stopPropogation() || Share.facebook('https://prohetamine.github.io/emoji-art', 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window')}>facebook</div>
+                  <div onClick={e => e.stopPropogation() || Share.mailru('https://prohetamine.github.io/emoji-art', 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window')}>mailru</div>
+
+                */}
+                <Button
+                  style={{ marginTop: '0px' }}
+                  label='pinterest.com'
+                  icon={[share, shareBlack]}
+                  onClick={e => {
+                    //e.stopPropogation()
+                    Share.pinterest('https://prohetamine.github.io/emoji-art', 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window', post)
+                  }}
+                />
+
+                <Button
+                  label='facebook.com'
+                  icon={[share, shareBlack]}
+                  onClick={e => {
+                    e.stopPropogation()
+                    Share.facebook('https://prohetamine.github.io/emoji-art', 'Emoji art', post, 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window')
+                  }}
+                />
+
+                <Button
+                  label='twitter.com'
+                  icon={[share, shareBlack]}
+                  onClick={e => {
+                    e.stopPropogation()
+                    Share.twitter('https://prohetamine.github.io/emoji-art', 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window')
+                  }}
+                />
+
+              {
+                  /*
+                  <Button
+                      label='pinterest.com'
+                      icon={[share, shareBlack]}
+                      onClick={e => {
+                        e.stopPropogation()
+                        Share.twitter('https://prohetamine.github.io/emoji-art', 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window', '')
+                      }}
+                    />
+
+                  */
+              }
+
+              </Message>
+            </Body>
+          )
+          : null
 }
 
 export default ShareAlert

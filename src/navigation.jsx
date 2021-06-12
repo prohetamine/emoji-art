@@ -211,8 +211,7 @@ const ButtonCheckBox = (() => {
       <Body
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
-        onTouchStart={() => onClick()}
-        onMouseDown={() => onClick()}
+        onClick={() => onClick()}
       >
         <Box animate={{ background: value ? hover ? '#F3DC1E' : '#000000' : hover ? '#F3DC1E' : '#000000' }}>
           {
@@ -274,7 +273,7 @@ const Navigation = () => {
       <Button
         label='Share'
         icon={[share, shareBlack]}
-        onClick={() => console.log('click')}
+        onClick={() => dispatch({ type: 'share' })}
       />
       <Button
         label='Telegram'
