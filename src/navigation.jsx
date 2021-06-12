@@ -286,7 +286,7 @@ const Navigation = () => {
         onClick={() => window.open('https://t.me/prohetamine_emojiart')}
       />
       <By>By <a style={{ color: '#000000', margin: '0px 7px' }} href='https://github.com/prohetamine'>Prohetamine</a> 2021</By>
-      <Love>Made with ♥ keyboards</Love>
+      <Love>Made with ♥ keyboard</Love>
     </Body>
   )
 }
