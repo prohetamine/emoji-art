@@ -162,7 +162,7 @@ export default () => {
 
               dispatch({
                 type: 'alert',
-                payload: 'Done!'
+                payload: 'Draw done!'
               })
             }
           }, Math.random() * 100)

@@ -18,7 +18,7 @@ const Body = styled.div`
 `
 
 const Message = styled.div`
-  padding: 25px 10px 25px 10px;
+  padding: 10px 25px;
   background: #F3DC1E;
   border-radius: 9px;
   font-family: Roboto;

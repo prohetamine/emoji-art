@@ -260,7 +260,7 @@ const Navigation = () => {
           } else {
             dispatch({
               type: 'alert',
-              payload: 'Wait!'
+              payload: 'Draw wait!'
             })
           }
         }}
