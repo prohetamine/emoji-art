@@ -33,9 +33,19 @@ const Bold = styled.div`
   font-weight: 500;
 `
 
+const Title = styled.div`
+  font-family: Roboto;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 27px;
+  letter-spacing: 0.06em;
+  color: #000000;
+`
+
 const Header = () => (
   <Body href='https://github.com/prohetamine/emoji-art'>
     <Logo src={logo} />
+    <Title><span style={{ fontWeight: '900' }}>Emoji Art</span> — new creativity, images from emoji</Title>
     <Repository>
       Git<Bold>Hub</Bold>
     </Repository>

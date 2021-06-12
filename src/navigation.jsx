@@ -19,7 +19,7 @@ import telegramBlack from './assets/telegram-black.svg'
 
 const Body = styled.div`
   width: 100%;
-  background: #000000;
+  background: #F3DC1E;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -37,8 +37,8 @@ const ButtonFile = (() => {
     margin-top: 18px;
     width: 245px;
     height: 45px;
-    background: #000000;
-    border: 3px solid #F3DC1E;
+    background: #F3DC1E;
+    border: 3px solid #000000;
     box-sizing: border-box;
     border-radius: 9px;
     display: flex;
@@ -55,7 +55,7 @@ const ButtonFile = (() => {
     font-weight: 500;
     font-size: 20px;
     line-height: 35px;
-    color: #F3DC1E;
+    color: #000000;
   `
 
   const Img = styled.img`
@@ -88,14 +88,14 @@ const ButtonFile = (() => {
         <input ref={ref} type='file' name='file' id='file' hidden />
         <label htmlFor='file'>
           <Body
-            animate={{ background: active ? '#F3DC1E' : '#000000' }}
+            animate={{ background: active ? '#000000' : '#F3DC1E' }}
             onMouseEnter={() => setActive(true)}
             onMouseLeave={() => setActive(false)}
             onTouchStart={() => setActive(true)}
             onTouchEnd={() => setActive(false)}
           >
-            <Text style={{ color: active ? '#000000' : '#F3DC1E' }}>Upload</Text>
-            <Img src={active ? arrowTopBlack : arrowTop } />
+            <Text style={{ color: active ? '#F3DC1E' : '#000000' }}>Upload</Text>
+            <Img src={active ? arrowTop : arrowTopBlack } />
           </Body>
         </label>
       </div>
@@ -111,8 +111,8 @@ const Button = (() => {
     margin-top: 18px;
     width: 245px;
     height: 45px;
-    background: #000000;
-    border: 3px solid #F3DC1E;
+    background: #F3DC1E;
+    border: 3px solid #000000;
     box-sizing: border-box;
     border-radius: 9px;
     display: flex;
@@ -142,15 +142,15 @@ const Button = (() => {
 
     return (
       <Body
-        animate={{ background: active ? '#F3DC1E' : '#000000' }}
+        animate={{ background: active ? '#000000' : '#F3DC1E' }}
         onClick={onClick}
         onMouseEnter={() => setActive(true)}
         onMouseLeave={() => setActive(false)}
         onTouchStart={() => setActive(true)}
         onTouchEnd={() => setActive(false)}
       >
-        <Text style={{ color: active ? '#000000' : '#F3DC1E' }}>{label}</Text>
-        <Img src={active ? icon[1] : icon[0] } />
+        <Text style={{ color: active ? '#F3DC1E' : '#000000' }}>{label}</Text>
+        <Img src={active ? icon[0] : icon[1]} />
       </Body>
     )
   }
@@ -169,7 +169,7 @@ const ButtonCheckBox = (() => {
     align-items: center;
     user-select: none;
     -webkit-user-select: none;
-    background: #000000;
+    background: #F3DC1E;
     border: none;
     cursor: pointer;
   `
@@ -178,8 +178,8 @@ const ButtonCheckBox = (() => {
     margin-right: 10px;
     width: 45px;
     height: 45px;
-    background: #000000;
-    border: 3px solid #F3DC1E;
+    background: #F3DC1E;
+    border: 3px solid #000000;
     box-sizing: border-box;
     border-radius: 9px;
     display: flex;
@@ -196,7 +196,7 @@ const ButtonCheckBox = (() => {
     font-weight: 500;
     font-size: 20px;
     line-height: 35px;
-    color: #F3DC1E;
+    color: #000000;
   `
 
   const Img = styled.img`
@@ -213,10 +213,10 @@ const ButtonCheckBox = (() => {
         onMouseLeave={() => setHover(false)}
         onClick={() => onClick()}
       >
-        <Box animate={{ background: value ? hover ? '#F3DC1E' : '#000000' : hover ? '#F3DC1E' : '#000000' }}>
+        <Box animate={{ background: value ? hover ? '#000000' : '#F3DC1E' : hover ? '#000000' : '#F3DC1E' }}>
           {
             value
-              ? <Img src={value ? hover ? markBlack : mark : hover ? markBlack : mark} />
+              ? <Img src={value ? hover ? mark : markBlack : hover ? mark : markBlack} />
               : null
           }
         </Box>
@@ -236,7 +236,12 @@ const By = styled.div`
   font-weight: 500;
   font-size: 19px;
   line-height: 22px;
-  color: #F3DC1E;
+  color: #000000;
+`
+
+const Love = styled(By)`
+  font-weight: 400;
+  margin-top: 10px;
 `
 
 const Navigation = () => {
@@ -280,7 +285,8 @@ const Navigation = () => {
         icon={[telegram, telegramBlack]}
         onClick={() => window.open('https://t.me/prohetamine_emojiart')}
       />
-    <By>By <a style={{ color: '#f3dc1d', margin: '0px 7px' }} href='https://github.com/prohetamine'>Prohetamine</a> 2021</By>
+      <By>By <a style={{ color: '#000000', margin: '0px 7px' }} href='https://github.com/prohetamine'>Prohetamine</a> 2021</By>
+      <Love>Made with ♥ keyboards</Love>
     </Body>
   )
 }

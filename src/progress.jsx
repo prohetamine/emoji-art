@@ -9,9 +9,9 @@ const Line = styled(motion.div)`
   position: absolute;
   z-index: 1;
   width: 169px;
-  height: 6px;
-  border-radius: 9px;
-  background: #F3DC1E;
+  height: 3px;
+  border-radius: 0px;
+  background: #000000;
 `
 
 const Progress = () => {

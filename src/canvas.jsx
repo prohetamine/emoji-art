@@ -11,6 +11,13 @@ import rgbToHex from './lib/rgb-to-hex'
 import getRGB from './lib/get-rgb'
 import deltaE from './lib/delta-e'
 
+const Body = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
 const Canvas = styled.canvas``
 
 export default () => {
@@ -70,8 +77,16 @@ export default () => {
 
   useEffect(() => {
     if (width && state.file && state.file.src) {
-      const _windowWidth = width
-          , _height = (state.file.height / state.file.width) * _windowWidth
+
+      const _windowWidth = width > height
+                            ? state.file.height > state.file.width
+                              ? height > 900 ? 900 : height
+                              : width > 1300 ? 1300 : width
+                            : state.file.height > state.file.width
+                              ? width > 1300 ? 1300 : width
+                              : height > 900 ? 900 : height
+
+      const _height = (state.file.height / state.file.width) * _windowWidth
           , _width = _windowWidth
 
       setState(
@@ -187,6 +202,8 @@ export default () => {
       , h = parseInt(state.height)
 
   return (
-    <Canvas ref={ref} height={h} width={w} />
+    <Body>
+      <Canvas ref={ref} height={h} width={w} />
+    </Body>
   )
 }

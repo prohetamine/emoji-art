@@ -12,9 +12,9 @@ const App = () => (
   <>
     <Alert />
     <ShareAlert />
+    <Progress />
     <Header />
     <Canvas />
-    <Progress />
     <Navigation />
   </>
 )
