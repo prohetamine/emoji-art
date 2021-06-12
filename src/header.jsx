@@ -1,4 +1,5 @@
 import React from 'react'
+import useWindowSize from '@charlietango/use-window-size'
 import styled from 'styled-components'
 import logo from './assets/logo.svg'
 
@@ -42,14 +43,18 @@ const Title = styled.div`
   color: #000000;
 `
 
-const Header = () => (
-  <Body href='https://github.com/prohetamine/emoji-art'>
-    <Logo src={logo} />
-    <Title><span style={{ fontWeight: '900' }}>Emoji Art</span> — new creativity, images from emoji</Title>
-    <Repository>
-      Git<Bold>Hub</Bold>
-    </Repository>
-  </Body>
-)
+const Header = () => {
+  const { width } = useWindowSize()
+
+  return (
+    <Body href='https://github.com/prohetamine/emoji-art'>
+      <Logo src={logo} />
+      <Title><span style={{ fontWeight: '900' }}>Emoji Art</span>{width > 784 ? '— new creativity, images from emoji' : ''}</Title>
+      <Repository>
+        Git<Bold>Hub</Bold>
+      </Repository>
+    </Body>
+  )
+}
 
 export default Header
