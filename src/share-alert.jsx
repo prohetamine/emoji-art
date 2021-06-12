@@ -149,19 +149,6 @@ const ShareAlert = () => {
           ? (
             <Body onClick={() => dispatch({ type: 'hidden-share' })}>
               <Message>
-                {/*<Link onClick={e => {e.stopPropagation(); Share.vkontakte('https://prohetamine.github.io/emoji-art', 'Emoji art', 'IMG_PATH', 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window')}}>VK</Link>
-                <Link onClick={e => {e.stopPropagation(); Share.odnoklassniki('https://prohetamine.github.io/emoji-art', 'Emoji art', 'IMG_PATH', 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window')}}>ODNOKLASSNIKI</Link>
-                <Link onClick={e => {e.stopPropagation(); Share.twitter('https://prohetamine.github.io/emoji-art', 'Emoji art', 'IMG_PATH', 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window')}}>VK</Link>
-                <Link onClick={e => {e.stopPropagation(); Share.facebook('https://prohetamine.github.io/emoji-art', 'Emoji art', 'IMG_PATH', 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window')}}>VK</Link>
-                <Link onClick={e => {e.stopPropagation(); Share.mailru('https://prohetamine.github.io/emoji-art', 'Emoji art', 'IMG_PATH', 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window')}}>VK</Link>
-
-
-                  <div onClick={e => e.stopPropogation() || Share.odnoklassniki('https://prohetamine.github.io/emoji-art', 'Emoji art', 'IMG_PATH', 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window')}>ok</div>
-                  <div onClick={e => e.stopPropogation() || Share.twitter('https://prohetamine.github.io/emoji-art', 'Emoji art', 'IMG_PATH', 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window')}>twitter</div>
-                  <div onClick={e => e.stopPropogation() || Share.facebook('https://prohetamine.github.io/emoji-art', 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window')}>facebook</div>
-                  <div onClick={e => e.stopPropogation() || Share.mailru('https://prohetamine.github.io/emoji-art', 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window')}>mailru</div>
-
-                */}
                 <Button
                   style={{ marginTop: '0px' }}
                   label='pinterest.com'
@@ -171,7 +158,6 @@ const ShareAlert = () => {
                     Share.pinterest('https://prohetamine.github.io/emoji-art', 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window', 'https://raw.githubusercontent.com/prohetamine/emoji-art/main/public/post.png')
                   }}
                 />
-
                 <Button
                   label='facebook.com'
                   icon={[share, shareBlack]}
@@ -180,7 +166,6 @@ const ShareAlert = () => {
                     Share.facebook('https://prohetamine.github.io/emoji-art', 'Emoji art', 'https://raw.githubusercontent.com/prohetamine/emoji-art/main/public/post.png', 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window')
                   }}
                 />
-
                 <Button
                   label='twitter.com'
                   icon={[share, shareBlack]}
@@ -189,21 +174,30 @@ const ShareAlert = () => {
                     Share.twitter('https://prohetamine.github.io/emoji-art', 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window')
                   }}
                 />
-
-              {
-                  /*
-                  <Button
-                      label='pinterest.com'
-                      icon={[share, shareBlack]}
-                      onClick={e => {
-                        e.stopPropogation()
-                        Share.twitter('https://prohetamine.github.io/emoji-art', 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window', '')
-                      }}
-                    />
-
-                  */
-              }
-
+                <Button
+                  label='vk.com'
+                  icon={[share, shareBlack]}
+                  onClick={e => {
+                    //e.stopPropogation()
+                    Share.vkontakte('https://prohetamine.github.io/emoji-art', 'Emoji art', 'https://raw.githubusercontent.com/prohetamine/emoji-art/main/public/post.png', 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window')
+                  }}
+                />
+                <Button
+                  label='ok.ru'
+                  icon={[share, shareBlack]}
+                  onClick={e => {
+                    //e.stopPropogation()
+                    Share.odnoklassniki('https://prohetamine.github.io/emoji-art', 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window')
+                  }}
+                />
+                <Button
+                  label='vk.com'
+                  icon={[share, shareBlack]}
+                  onClick={e => {
+                    //e.stopPropogation()
+                    Share.mailru('https://prohetamine.github.io/emoji-art', 'Emoji art', 'IMG_PATH', 'Emoji art — new art, images from emoji, art generator, send a picture of the art in your window')
+                  }}
+                />
               </Message>
             </Body>
           )
