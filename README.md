@@ -1,6 +1,6 @@
 # Emoji Art — new creativity, images from emoji
 
-Link to view: [Emoji Art](https://prohetamine.github.io/emoji-art/)
+Link to view: [Emoji Art](https://prohetamine.github.io/emoji-art/?github)
 
 ![enter image description here](/media/main.png)
 
