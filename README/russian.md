@@ -34,7 +34,7 @@ Link: [Emoji Art](https://prohetamine.github.io/emoji-art/?github)
 
 ![example](https://github.com/prohetamine/emoji-art/blob/main/examples/9.jpg)
 
-Другие примеры из этого проекта можно найти тут: [examples](https://github.com/prohetamine/emoji-art/blob/main/examples)
+Другие примеры из этого проекта можно найти тут: [примеры](https://github.com/prohetamine/emoji-art/blob/main/examples)
 
 ### Контакты
 
