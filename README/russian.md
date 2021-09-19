@@ -5,16 +5,16 @@
 
 # emoji-art
 
-> emoji-art — new creativity, images from emoji
+> emoji-art — новое искусство, изображения из эмодзи
 
-### Why ?
-Project designed to demonstrate my experience
+### Почему ?
+Проект разработанный для демонстрации моего опыта
 
-### View
+### Смотреть
 
 Link: [Emoji Art](https://prohetamine.github.io/emoji-art/?github)
 
-### Examples and description
+### Примеры и описание
 
 ![example](https://github.com/prohetamine/emoji-art/blob/main/examples/1.png)
 
@@ -34,14 +34,14 @@ Link: [Emoji Art](https://prohetamine.github.io/emoji-art/?github)
 
 ![example](https://github.com/prohetamine/emoji-art/blob/main/examples/9.jpg)
 
-Other examples from this project can be found here: [examples](https://github.com/prohetamine/emoji-art/blob/main/examples)
+Другие примеры из этого проекта можно найти тут: [examples](https://github.com/prohetamine/emoji-art/blob/main/examples)
 
-### Contacts
+### Контакты
 
-My Telegram: [@prohetamine](https://t.me/prohetamine), [channel](https://t.me/prohetamines)
+Мой Телеграм: [@prohetamine](https://t.me/prohetamine), [канал](https://t.me/prohetamines)
 
-Email: prohetamine@gmail.com
+Почта: prohetamine@gmail.com
 
-Donat money: [patreon](https://www.patreon.com/prohetamine)
+Донат денег: [patreon](https://www.patreon.com/prohetamine)
 
-If you have any questions and/or suggestions, please email me in telegram, if you find any bugs also let me know, I will be very grateful.
+Если у вас есть какие-либо вопросы и/или предложения, пожалуйста, напишите мне в телеграмме, если вы найдете ошибки также дайте мне знать, я буду очень благодарен.
